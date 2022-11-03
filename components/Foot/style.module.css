@@ -1,0 +1,19 @@
+.github_icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+    margin:1em;
+    cursor: pointer;
+    border-radius:15px;
+    color: #F1FAEE;
+    border: 2px solid #F1FAEE
+}
+
+
+@media (hover: hover) {
+    .github_icon:hover {
+        background: #663F46;
+        color: #F1FAEE;
+    }
+  }
