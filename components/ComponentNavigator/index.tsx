@@ -1,8 +1,9 @@
 import styles from "./style.module.css"
+import { Dispatch, SetStateAction } from "react"
 
 interface Props {
     component:number;
-    setComponent:any;
+    setComponent:Dispatch<SetStateAction<number>>;
 }
 
 export const ComponentNavigator = ({component, setComponent}:Props) => {

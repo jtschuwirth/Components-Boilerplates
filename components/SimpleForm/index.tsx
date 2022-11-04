@@ -2,22 +2,24 @@ import { FormEventHandler } from "react";
 import styles from "./style.module.css"
 
 interface Props {
-    onSubmit:FormEventHandler;
+    onSubmit: FormEventHandler;
+    inputs: {title:string, name:string}[];
 }
 
-export const SimpleForm = ({onSubmit}:Props) => {
+export const SimpleForm = ({onSubmit, inputs}:Props) => {
+
 
     return (
         <form onSubmit={onSubmit} className={styles.form}>
             <div className={styles.inputs}>
-                <div className={styles.input_container}>
-                    <input className={styles.input} name="input_1" type="text" required/>
-                    <label className={styles.label}>Input 1</label>
-                </div>
-                <div className={styles.input_container}>
-                    <input className={styles.input} name="input_2" type="text" required/>
-                    <label className={styles.label}>Input 2</label>
-                </div>
+                {inputs.map((_) => {
+                    return (
+                    <div className={styles.input_container}>
+                        <input className={styles.input} name={_.name} type="text" required/>
+                        <label className={styles.label}>{_.title}</label>
+                    </div>
+                    )
+                })}
             </div>
             <button className={styles.btn} type="submit">Submit</button>
         </form>
