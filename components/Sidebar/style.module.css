@@ -1,0 +1,123 @@
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 1em;
+    width: 250px
+  }
+.link {
+  text-decoration: none;
+}
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.logo {
+    max-width: 10em;
+    margin: 2em 0;
+  }
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(22,37,56,1);
+    letter-spacing: 0.4px;
+    gap: 1em;
+
+    padding: 0.5em 2em;
+    cursor: pointer;
+
+  }
+.menuItem:hover {
+    background-color: rgba(57,113,104,1);
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: rgba(254,254,255,1);
+    cursor: pointer;
+}
+
+.activeMenuItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(254,254,255,1);
+    letter-spacing: 0.4px;
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+    gap: 1em;
+
+    background-color: rgba(57,113,104,1);
+    padding: 0.5em 2em;
+    border-radius: 10px;
+    cursor:default;
+  }
+
+.languages {
+    margin: 2em;
+    display: flex;
+    align-items: center;
+  }
+.btns {
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
+    align-items: center;
+  }
+.english {
+    border: 3px solid transparent;
+  }
+.english:hover {
+    cursor: pointer;
+    border: 3px solid #1d3853;
+    border-radius: 50px;
+}
+.french {
+    border: 3px solid transparent;
+    margin: 0 0.3em;
+  }
+.french:hover {
+    cursor: pointer;
+    border: 3px solid #1d3853;
+    border-radius: 50px;
+}
+.spanish {
+    border: 3px solid transparent;
+}
+.spanish:hover {
+    cursor: pointer;
+      border: 3px solid #1d3853;
+      border-radius: 50px;
+}
+.items {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+
+@media (max-width: 900px) {
+  .items {
+    display: none;
+  }
+  .sidebar {
+    width: 80px;
+  }
+  .logo {
+    width: 80px;
+  }
+}
